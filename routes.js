@@ -6,7 +6,7 @@ const LOGOUT = "/logout";
 const SERACH = "/search";
 
 // Users
-const USER = "/users";
+const USERS = "/users";
 const USER_DETAIL = "/:id";
 const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
@@ -24,10 +24,10 @@ const routes = {
   login: LOGIN,
   logout: LOGOUT,
   search: SERACH,
-  users: USER,
+  users: USERS,
   userDetail: (id) => {
     if (id) {
-      return `/user/${id}`;
+      return `/users/${id}`;
     } else {
       return USER_DETAIL;
     }
@@ -40,7 +40,7 @@ const routes = {
     if (id) {
       return `/videos/${id}`;
     } else {
-      return USER_DETAIL;
+      return VIDEO_DETAIL;
     }
   },
   editVideo: EDIT_VIDEO,
